@@ -1,5 +1,6 @@
 import 'package:banglore_assignement/app/full_view/view/full_screen.dart';
 import 'package:banglore_assignement/app/home_page/view/widget/home_widgets.dart';
+import 'package:banglore_assignement/app/home_page/view/widget/list.dart';
 import 'package:banglore_assignement/app/utiles/colors.dart';
 import 'package:banglore_assignement/app/utiles/fonts.dart';
 import 'package:banglore_assignement/app/utiles/widgets.dart';
@@ -65,9 +66,14 @@ class HomePage extends StatelessWidget {
               child: Wrap(
                 children: List.generate(textTitle.length - 3, (index) {
                   final data = textTitle[index];
-
+                  final colorsFull = fullColor[index];
                   final subTitle = textSubTitle[index];
-                  return CustomGlassContainer(data: data,subTitle:subTitle);
+                  final icons = iconDatas[index];
+                  return CustomGlassContainer(
+                      data: data,
+                      subTitle: subTitle,
+                      icons: icons,
+                      iconColor: colorsFull);
                 }),
               ),
             ),
@@ -148,24 +154,3 @@ class OderHighWayFood extends StatelessWidget {
   }
 }
 
-var textTitle = [
-  
-  "Buy\nFastTag",
-   
-  "Recharge\nFastTag",
-  "Buy\nGPS Device",
-  "Buy\nInsurance",
-  "Get Roadside\nAssistance",
-  "Bill Payment\nand FasTag",
-  "Ev Charges",
-];
-
-var textSubTitle = [
-  "Pay Toll digitally",
-  "UPI and other options",
-  "Track your vechile",
-  "Protect your vechile",
-  "AnyWhere.AnyTime",
-  "Bill Payment and FasTag",
-  "AnyWhere.AnyTime",
-];

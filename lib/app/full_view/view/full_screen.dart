@@ -1,5 +1,5 @@
-import 'package:banglore_assignement/app/home_page/view/home_page.dart';
 import 'package:banglore_assignement/app/home_page/view/widget/home_widgets.dart';
+import 'package:banglore_assignement/app/home_page/view/widget/list.dart';
 import 'package:banglore_assignement/app/utiles/colors.dart';
 import 'package:banglore_assignement/app/utiles/widgets.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +41,15 @@ class FullScreenPage extends StatelessWidget {
                 child: Wrap(
                   children: List.generate(textTitle.length, (index) {
                     final data = textTitle[index];
-                    return CustomGlassContainer(data: data, subTitle: '',);
+                    final subTitle = textSubTitle[index];
+                    final icons = iconDatas[index];
+                    final colorsFull = fullColor[index];
+                    return CustomGlassContainer(
+                      data: data,
+                      subTitle: subTitle,
+                      icons: icons,
+                      iconColor: colorsFull,
+                    );
                   }),
                 ),
               ),

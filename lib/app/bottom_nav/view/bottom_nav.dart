@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/bxs.dart';
-import 'package:iconify_flutter/icons/clarity.dart';
 import 'package:iconify_flutter/icons/et.dart';
 
 class BottomNavigationMobile extends StatelessWidget {

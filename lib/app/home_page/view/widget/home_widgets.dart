@@ -82,12 +82,16 @@ class CustomCircleAvatar extends StatelessWidget {
 }
 
 class CustomGlassContainer extends StatelessWidget {
+  final IconData icons;
   final String data;
   final String subTitle;
+  final Color iconColor;
   const CustomGlassContainer({
     Key? key,
     required this.data,
     required this.subTitle,
+    required this.icons,
+    required this. iconColor,
   }) : super(key: key);
 
   @override
@@ -123,9 +127,9 @@ class CustomGlassContainer extends StatelessWidget {
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 16),
                     ),
-                    const Icon(
-                      Icons.align_vertical_center_sharp,
-                      color: white,
+                    Icon(
+                      icons,
+                      color: iconColor
                     ),
                   ],
                 ),
@@ -135,7 +139,10 @@ class CustomGlassContainer extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       (subTitle),
-                      style: const TextStyle(color: Colors.grey),
+                      style: const TextStyle(
+                        color: Colors.grey,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                   ),
                 ),
