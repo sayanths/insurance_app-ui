@@ -2,14 +2,11 @@ import 'package:banglore_assignement/app/full_view/view/full_screen.dart';
 import 'package:banglore_assignement/app/home_page/view/widget/high_way.dart';
 import 'package:banglore_assignement/app/home_page/view/widget/home_widgets.dart';
 import 'package:banglore_assignement/app/home_page/view/widget/list.dart';
-import 'package:banglore_assignement/app/home_page/view_model/view_model.dart';
 import 'package:banglore_assignement/app/utiles/colors.dart';
 import 'package:banglore_assignement/app/utiles/fonts.dart';
 import 'package:banglore_assignement/app/utiles/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconify_flutter/iconify_flutter.dart';
-import 'package:iconify_flutter/icons/carbon.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -25,15 +22,15 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Row(
                 children: const [
-                  Iconify(
-                    Carbon.location_current,
-                  ),
+                  Icon(Icons.place),
                   Text(
-                    "Location not updated",
-                    // style: Lato(cl: white),
+                    "Yelahanka,Banglore",
                   ),
                   Spacer(),
-                  CircleAvatar(),
+                  CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        "https://cdn-icons-png.flaticon.com/512/236/236831.png"),
+                  ),
                 ],
               ),
             ),
@@ -92,8 +89,8 @@ class HomePage extends StatelessWidget {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: List.generate(foodIcon.length, (index) {
-                    final foodIcons =foodIcon[index];
-                    return  CustomCircleAvatar(foodIcons:foodIcons);
+                    final foodIcons = foodIcon[index];
+                    return CustomCircleAvatar(foodIcons: foodIcons);
                   })),
             ),
             height10,
