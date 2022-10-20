@@ -91,7 +91,6 @@ class HomePage extends StatelessWidget {
             const TitleWidget(title: "Order food on high restaurants"),
             height10,
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 OderHighWayFood(
                     title: 'Place\nOrder', icon: Icons.food_bank_outlined),
@@ -118,26 +117,30 @@ class OderHighWayFood extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-            margin: const EdgeInsets.all(7),
-            height: 80,
-            width: 111,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: const Color.fromARGB(255, 243, 243, 96),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // Icon(Icons.food_bank_outlined),
-                // Text("Place\nOrder")
-                Icon(icon),
-                Text(title)
-              ],
-            )),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(2.0),
+      child: Column(
+        children: [
+          Container(
+              height: 80,
+              width: 125,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: const Color.fromARGB(255, 243, 243, 96),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(icon),
+                  Text(
+                    title,
+                    style: gfontsubtitlefont(
+                        cl: Colors.black, fw: FontWeight.bold),
+                  )
+                ],
+              )),
+        ],
+      ),
     );
   }
 }
