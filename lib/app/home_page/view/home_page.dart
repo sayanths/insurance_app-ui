@@ -63,12 +63,12 @@ class HomePage extends StatelessWidget {
             ),
             Center(
               child: Wrap(
-                children: const [
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                ],
+                children: List.generate(textTitle.length - 3, (index) {
+                  final data = textTitle[index];
+
+                  final subTitle = textSubTitle[index];
+                  return CustomGlassContainer(data: data,subTitle:subTitle);
+                }),
               ),
             ),
             height10,
@@ -147,3 +147,25 @@ class OderHighWayFood extends StatelessWidget {
     );
   }
 }
+
+var textTitle = [
+  
+  "Buy\nFastTag",
+   
+  "Recharge\nFastTag",
+  "Buy\nGPS Device",
+  "Buy\nInsurance",
+  "Get Roadside\nAssistance",
+  "Bill Payment\nand FasTag",
+  "Ev Charges",
+];
+
+var textSubTitle = [
+  "Pay Toll digitally",
+  "UPI and other options",
+  "Track your vechile",
+  "Protect your vechile",
+  "AnyWhere.AnyTime",
+  "Bill Payment and FasTag",
+  "AnyWhere.AnyTime",
+];

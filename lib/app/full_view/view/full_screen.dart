@@ -1,3 +1,4 @@
+import 'package:banglore_assignement/app/home_page/view/home_page.dart';
 import 'package:banglore_assignement/app/home_page/view/widget/home_widgets.dart';
 import 'package:banglore_assignement/app/utiles/colors.dart';
 import 'package:banglore_assignement/app/utiles/widgets.dart';
@@ -34,16 +35,15 @@ class FullScreenPage extends StatelessWidget {
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
                   )),
-              child: Wrap(
-                children: const [
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                ],
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 15, horizontal: 2),
+                child: Wrap(
+                  children: List.generate(textTitle.length, (index) {
+                    final data = textTitle[index];
+                    return CustomGlassContainer(data: data, subTitle: '',);
+                  }),
+                ),
               ),
             ),
           ],
