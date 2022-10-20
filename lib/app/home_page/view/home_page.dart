@@ -16,16 +16,21 @@ class HomePage extends StatelessWidget {
         child: ListView(
           children: [
             height20,
-            Row(
-              children: const [
-                Iconify(
-                  Carbon.location_current,
-                ),
-                Text(
-                  "Kannur,Kerala,India",
-                  // style: Lato(cl: white),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                children: const [
+                  Iconify(
+                    Carbon.location_current,
+                  ),
+                  Text(
+                    "Kannur,Kerala,India",
+                    // style: Lato(cl: white),
+                  ),
+                  Spacer(),
+                  CircleAvatar()
+                ],
+              ),
             ),
             ImageSlideshow(
               indicatorBackgroundColor: Colors.transparent,
@@ -73,6 +78,21 @@ class HomePage extends StatelessWidget {
             ),
             height20,
             const Text("Earn Delite Points"),
+            Center(
+              child: Wrap(
+                children: const [
+                  CustomGlassContainer(),
+                  CustomGlassContainer(),
+                  CustomGlassContainer(),
+                  CustomGlassContainer(),
+                  CustomGlassContainer(),
+                  CustomGlassContainer(),
+                ],
+              ),
+            ),
+            height20,
+            const Text("Earn Delite Points"),
+            Container()
           ],
         ),
       ),
@@ -97,6 +117,53 @@ class CustomCircleAvatar extends StatelessWidget {
           Icons.food_bank,
           size: 50,
         ),
+      ),
+    );
+  }
+}
+
+class CustomGlassContainer extends StatelessWidget {
+  const CustomGlassContainer({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Column(
+        children: [
+          Container(
+            height: 100,
+            width: 162,
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomCenter,
+                colors: [
+                  const Color.fromARGB(26, 13, 13, 13).withOpacity(0.5),
+                  const Color.fromARGB(26, 0, 0, 0).withOpacity(0.2),
+                  const Color.fromARGB(26, 251, 255, 0).withOpacity(0.2),
+                  const Color.fromARGB(26, 251, 255, 0).withOpacity(0.2),
+                  const Color.fromARGB(26, 251, 255, 0).withOpacity(0.2),
+                  const Color.fromARGB(26, 0, 0, 0).withOpacity(0.2),
+                ],
+              ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Icon(Icons.mail),
+                Text(
+                  ("sdsd"),
+                  // style:
+                  //     gfontsubtitlefont(cl: white, fw: FontWeight.bold, sz: 17),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
