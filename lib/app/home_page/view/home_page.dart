@@ -87,12 +87,57 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            height20,
+            height10,
             const TitleWidget(title: "Order food on high restaurants"),
-            Container()
+            height10,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                OderHighWayFood(
+                    title: 'Place\nOrder', icon: Icons.food_bank_outlined),
+                OderHighWayFood(title: 'Digital\nMenu', icon: Icons.qr_code),
+                OderHighWayFood(
+                    title: 'Order\nStatus', icon: Icons.border_outer_rounded),
+              ],
+            ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class OderHighWayFood extends StatelessWidget {
+  final String title;
+  final IconData icon;
+  const OderHighWayFood({
+    Key? key,
+    required this.title,
+    required this.icon,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+            margin: const EdgeInsets.all(7),
+            height: 80,
+            width: 111,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: const Color.fromARGB(255, 243, 243, 96),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Icon(Icons.food_bank_outlined),
+                // Text("Place\nOrder")
+                Icon(icon),
+                Text(title)
+              ],
+            )),
+      ],
     );
   }
 }
