@@ -92,8 +92,8 @@ class CustomGlassContainer extends StatelessWidget {
       children: [
         Container(
           height: 80,
-          width: 175,
-          margin: const EdgeInsets.all(10),
+          width: 184,
+          margin: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
             gradient: const LinearGradient(
@@ -101,7 +101,7 @@ class CustomGlassContainer extends StatelessWidget {
               end: Alignment.bottomCenter,
               colors: [
                 Colors.yellow,
-                white,
+                Color.fromARGB(255, 253, 228, 0),
                 Colors.yellow,
               ],
             ),

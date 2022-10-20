@@ -54,7 +54,8 @@ class HomePage extends StatelessWidget {
                     },
                     child: Text(
                       "view All",
-                      style: gfontsubtitlefont(cl: Colors.grey),
+                      style: gfontsubtitlefont(
+                          cl: const Color.fromARGB(255, 59, 58, 58)),
                     ),
                   ),
                 ],
