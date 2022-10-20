@@ -1,5 +1,6 @@
 import 'package:banglore_assignement/app/home_page/view_model/view_model.dart';
 import 'package:banglore_assignement/app/utiles/colors.dart';
+import 'package:banglore_assignement/app/utiles/fonts.dart';
 import 'package:banglore_assignement/app/utiles/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
@@ -24,7 +25,7 @@ class HomePage extends StatelessWidget {
                     Carbon.location_current,
                   ),
                   Text(
-                    "Kannur,Kerala,India",
+                    "Location not updated",
                     // style: Lato(cl: white),
                   ),
                   Spacer(),
@@ -58,7 +59,39 @@ class HomePage extends StatelessWidget {
                 },
               ),
             ),
-            height10,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Services",
+                    style: Lato(cl: black, sz: 25, fw: FontWeight.bold),
+                  ),
+                  const Spacer(),
+                  InkWell(
+                    onTap: () {
+                      // Get.to(() => ViewAllView(),
+                      //     transition: Transition.cupertino);
+                    },
+                    child: Text(
+                      "view All",
+                      style: gfontsubtitlefont(cl: Colors.grey),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Center(
+              child: Wrap(
+                children: const [
+                  CustomGlassContainer(),
+                  CustomGlassContainer(),
+                  CustomGlassContainer(),
+                  CustomGlassContainer(),
+                ],
+              ),
+            ),
+            height20,
             const Text("Earn Delite Points"),
             height20,
             Row(
@@ -69,21 +102,8 @@ class HomePage extends StatelessWidget {
                 CustomCircleAvatar(),
               ],
             ),
-          height20,
-            Center(
-              child: Wrap(
-                children: const [
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                  CustomGlassContainer(),
-                ],
-              ),
-            ),
             height20,
-            const Text("Earn Delite Points"),
+            const Text("Order food on high restaurants"),
             Container()
           ],
         ),
@@ -125,7 +145,7 @@ class CustomGlassContainer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 100,
+            height: 80,
             width: 162,
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
@@ -134,21 +154,36 @@ class CustomGlassContainer extends StatelessWidget {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color.fromARGB(255, 255, 255, 0),
-                  Color.fromARGB(255, 40, 40, 0),
+                  Color.fromARGB(255, 230, 230, 230),
+                  Color.fromARGB(255, 254, 254, 158),
                 ],
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(Icons.mail),
-                Text(
-                  ("sdsd"),
-                  // style:
-                  //     gfontsubtitlefont(cl: white, fw: FontWeight.bold, sz: 17),
-                ),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text("sdssd"),
+                      Icon(
+                        Icons.mail,
+                        color: white,
+                      ),
+                    ],
+                  ),
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      ("sdsd"),
+                      // style:
+                      //     gfontsubtitlefont(cl: white, fw: FontWeight.bold, sz: 17),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
