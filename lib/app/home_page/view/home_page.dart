@@ -2,10 +2,9 @@ import 'package:banglore_assignement/app/home_page/view_model/view_model.dart';
 import 'package:banglore_assignement/app/utiles/colors.dart';
 import 'package:banglore_assignement/app/utiles/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:get/get.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/carbon.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,8 +18,13 @@ class HomePage extends StatelessWidget {
             height20,
             Row(
               children: const [
-                Icon(Icons.navigation),
-                Text("Location not updated"),
+                Iconify(
+                  Carbon.location_current,
+                ),
+                Text(
+                  "Kannur,Kerala,India",
+                  // style: Lato(cl: white),
+                ),
               ],
             ),
             ImageSlideshow(
@@ -49,7 +53,49 @@ class HomePage extends StatelessWidget {
                 },
               ),
             ),
+            height10,
+            const Text("Earn Delite Points"),
+            height20,
+            Container(
+              height: 100,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 250, 250, 227),
+                  borderRadius: BorderRadius.circular(5)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  CustomCircleAvatar(),
+                  CustomCircleAvatar(),
+                  CustomCircleAvatar(),
+                ],
+              ),
+            ),
+            height20,
+            const Text("Earn Delite Points"),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CustomCircleAvatar extends StatelessWidget {
+  const CustomCircleAvatar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const CircleAvatar(
+      backgroundColor: yellow,
+      radius: 35,
+      child: CircleAvatar(
+        radius: 32,
+        backgroundColor: white,
+        child: Icon(
+          Icons.food_bank,
+          size: 50,
         ),
       ),
     );

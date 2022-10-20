@@ -39,6 +39,7 @@ dependencies:
   animated_bottom_navigation_bar: ^1.1.0
   get: ^4.6.5
   flutter_image_slideshow: ^0.1.4
+  iconify_flutter: ^0.0.5
 
 dev_dependencies:
   flutter_test:

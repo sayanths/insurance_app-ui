@@ -34,6 +34,7 @@ class BottomNavigationMobile extends StatelessWidget {
               BottomNavigationBarItem(
                   icon: Icon(Icons.notification_add), label: ''),
               BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+              BottomNavigationBarItem(icon: Icon(Icons.person_add_alt_1_rounded), label: ''),
             ],
           ),
         );
