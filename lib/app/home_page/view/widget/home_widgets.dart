@@ -83,10 +83,11 @@ class CustomCircleAvatar extends StatelessWidget {
 
 class CustomGlassContainer extends StatelessWidget {
   final String data;
-    final String subTitle;
+  final String subTitle;
   const CustomGlassContainer({
     Key? key,
-    required this.data, required this. subTitle,
+    required this.data,
+    required this.subTitle,
   }) : super(key: key);
 
   @override
@@ -94,7 +95,7 @@ class CustomGlassContainer extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 80,
+          height: 90,
           width: 184,
           margin: const EdgeInsets.all(5),
           decoration: BoxDecoration(
@@ -128,10 +129,14 @@ class CustomGlassContainer extends StatelessWidget {
                     ),
                   ],
                 ),
-                 Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    (subTitle),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      (subTitle),
+                      style: const TextStyle(color: Colors.grey),
+                    ),
                   ),
                 ),
               ],
