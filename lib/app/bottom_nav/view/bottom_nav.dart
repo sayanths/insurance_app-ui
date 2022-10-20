@@ -2,6 +2,10 @@ import 'package:banglore_assignement/app/bottom_nav/view_model/bottom_nav_contro
 import 'package:banglore_assignement/app/utiles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/bxs.dart';
+import 'package:iconify_flutter/icons/clarity.dart';
+import 'package:iconify_flutter/icons/et.dart';
 
 class BottomNavigationMobile extends StatelessWidget {
   const BottomNavigationMobile({Key? key}) : super(key: key);
@@ -29,12 +33,11 @@ class BottomNavigationMobile extends StatelessWidget {
             }),
             type: BottomNavigationBarType.fixed,
             items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-              BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ''),
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+              BottomNavigationBarItem(icon: Iconify(Bxs.offer,color: white,), label: 'Offers'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.notification_add), label: ''),
-              BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
-              BottomNavigationBarItem(icon: Icon(Icons.person_add_alt_1_rounded), label: ''),
+                  icon: Iconify(Et.compass,color: white,), label: 'compass'),
+              BottomNavigationBarItem(icon: Icon(Icons.person), label: 'profile'),
             ],
           ),
         );

@@ -1,8 +1,10 @@
+import 'package:banglore_assignement/app/full_view/view/full_screen.dart';
 import 'package:banglore_assignement/app/home_page/view/widget/home_widgets.dart';
 import 'package:banglore_assignement/app/utiles/colors.dart';
 import 'package:banglore_assignement/app/utiles/fonts.dart';
 import 'package:banglore_assignement/app/utiles/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/carbon.dart';
 
@@ -28,7 +30,7 @@ class HomePage extends StatelessWidget {
                     // style: Lato(cl: white),
                   ),
                   Spacer(),
-                  CircleAvatar()
+                  CircleAvatar(),
                 ],
               ),
             ),
@@ -47,8 +49,8 @@ class HomePage extends StatelessWidget {
                   const Spacer(),
                   InkWell(
                     onTap: () {
-                      // Get.to(() => ViewAllView(),
-                      //     transition: Transition.cupertino);
+                      Get.to(() => const FullScreenPage(),
+                          transition: Transition.cupertino);
                     },
                     child: Text(
                       "view All",
