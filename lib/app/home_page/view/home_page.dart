@@ -61,23 +61,15 @@ class HomePage extends StatelessWidget {
             height10,
             const Text("Earn Delite Points"),
             height20,
-            Container(
-              height: 100,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 250, 250, 227),
-                  borderRadius: BorderRadius.circular(5)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  CustomCircleAvatar(),
-                  CustomCircleAvatar(),
-                  CustomCircleAvatar(),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                CustomCircleAvatar(),
+                CustomCircleAvatar(),
+                CustomCircleAvatar(),
+              ],
             ),
-            height20,
-            const Text("Earn Delite Points"),
+          height20,
             Center(
               child: Wrap(
                 children: const [
@@ -138,16 +130,12 @@ class CustomGlassContainer extends StatelessWidget {
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomCenter,
                 colors: [
-                  const Color.fromARGB(26, 13, 13, 13).withOpacity(0.5),
-                  const Color.fromARGB(26, 0, 0, 0).withOpacity(0.2),
-                  const Color.fromARGB(26, 251, 255, 0).withOpacity(0.2),
-                  const Color.fromARGB(26, 251, 255, 0).withOpacity(0.2),
-                  const Color.fromARGB(26, 251, 255, 0).withOpacity(0.2),
-                  const Color.fromARGB(26, 0, 0, 0).withOpacity(0.2),
+                  Color.fromARGB(255, 255, 255, 0),
+                  Color.fromARGB(255, 40, 40, 0),
                 ],
               ),
             ),
