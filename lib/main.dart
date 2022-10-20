@@ -1,4 +1,5 @@
 import 'package:banglore_assignement/app/bottom_nav/view/bottom_nav.dart';
+import 'package:banglore_assignement/app/login_page/view/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'High way delite',
-      home: BottomNavigationMobile(),
+      home: MyLogin(),
     );
   }
 }

@@ -102,7 +102,7 @@ class CustomGlassContainer extends StatelessWidget {
       children: [
         Container(
           height: 90,
-          width: 184,
+          width: 160,
           margin: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),

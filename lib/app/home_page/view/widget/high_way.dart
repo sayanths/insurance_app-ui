@@ -18,7 +18,7 @@ class OderHighWayFood extends StatelessWidget {
         children: [
           Container(
               height: 80,
-              width: 125,
+              width: 110,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: const Color.fromARGB(255, 243, 243, 96),
