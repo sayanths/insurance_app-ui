@@ -8,7 +8,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(),
+      body: SafeArea(
+        child: ListView(
+          children: [
+            Row(
+              children: const [
+                Icon(Icons.navigation),
+                Text("Location not updated"),
+              ],
+            ),
+
+          ],
+        ),
+      ),
     );
   }
 }
