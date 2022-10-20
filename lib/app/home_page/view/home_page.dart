@@ -1,6 +1,8 @@
 import 'package:banglore_assignement/app/full_view/view/full_screen.dart';
+import 'package:banglore_assignement/app/home_page/view/widget/high_way.dart';
 import 'package:banglore_assignement/app/home_page/view/widget/home_widgets.dart';
 import 'package:banglore_assignement/app/home_page/view/widget/list.dart';
+import 'package:banglore_assignement/app/home_page/view_model/view_model.dart';
 import 'package:banglore_assignement/app/utiles/colors.dart';
 import 'package:banglore_assignement/app/utiles/fonts.dart';
 import 'package:banglore_assignement/app/utiles/widgets.dart';
@@ -88,13 +90,11 @@ class HomePage extends StatelessWidget {
                   color: const Color.fromARGB(255, 255, 255, 198),
                   borderRadius: BorderRadius.circular(10)),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  CustomCircleAvatar(),
-                  CustomCircleAvatar(),
-                  CustomCircleAvatar(),
-                ],
-              ),
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: List.generate(foodIcon.length, (index) {
+                    final foodIcons =foodIcon[index];
+                    return  CustomCircleAvatar(foodIcons:foodIcons);
+                  })),
             ),
             height10,
             const TitleWidget(title: "Order food on high restaurants"),
@@ -114,43 +114,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-class OderHighWayFood extends StatelessWidget {
-  final String title;
-  final IconData icon;
-  const OderHighWayFood({
-    Key? key,
-    required this.title,
-    required this.icon,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(2.0),
-      child: Column(
-        children: [
-          Container(
-              height: 80,
-              width: 125,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: const Color.fromARGB(255, 243, 243, 96),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(icon),
-                  Text(
-                    title,
-                    style: gfontsubtitlefont(
-                        cl: Colors.black, fw: FontWeight.bold),
-                  )
-                ],
-              )),
-        ],
-      ),
-    );
-  }
-}
-

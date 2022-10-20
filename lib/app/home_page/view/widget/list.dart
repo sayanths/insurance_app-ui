@@ -21,7 +21,7 @@ var textSubTitle = [
 ];
 
 var iconDatas = <IconData>[
-  Icons.block,
+  Icons.location_city,
   Icons.card_membership,
   Icons.gps_fixed,
   Icons.car_crash,
@@ -38,4 +38,10 @@ var fullColor = <Color>[
   const Color.fromARGB(255, 135, 131, 130),
   const Color.fromARGB(255, 1, 0, 59),
   const Color.fromARGB(255, 5, 64, 0),
+];
+
+var foodIcon = <IconData>[
+  Icons.food_bank,
+  Icons.location_city,
+  Icons.receipt,
 ];

@@ -60,21 +60,23 @@ class TitleWidget extends StatelessWidget {
 }
 
 class CustomCircleAvatar extends StatelessWidget {
+  final IconData foodIcons;
   const CustomCircleAvatar({
     Key? key,
+    required this.foodIcons,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const CircleAvatar(
+    return CircleAvatar(
       backgroundColor: yellow,
       radius: 35,
       child: CircleAvatar(
         radius: 32,
         backgroundColor: white,
         child: Icon(
-          Icons.food_bank,
-          size: 50,
+          foodIcons,
+          size: 35,
         ),
       ),
     );
@@ -91,7 +93,7 @@ class CustomGlassContainer extends StatelessWidget {
     required this.data,
     required this.subTitle,
     required this.icons,
-    required this. iconColor,
+    required this.iconColor,
   }) : super(key: key);
 
   @override
@@ -127,10 +129,7 @@ class CustomGlassContainer extends StatelessWidget {
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 16),
                     ),
-                    Icon(
-                      icons,
-                      color: iconColor
-                    ),
+                    Icon(icons, color: iconColor),
                   ],
                 ),
                 Padding(
