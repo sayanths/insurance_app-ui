@@ -1,4 +1,5 @@
 import 'package:banglore_assignement/app/bottom_nav/view_model/bottom_nav_controller.dart';
+import 'package:banglore_assignement/app/utiles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,7 +10,7 @@ class BottomNavigationMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(BottomNNavController());
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: white,
       body: GetBuilder<BottomNNavController>(
         builder: (context) {
           return context.pages[context.pageIndex];
@@ -19,9 +20,9 @@ class BottomNavigationMobile extends StatelessWidget {
         return ClipRRect(
           borderRadius: BorderRadius.circular(2),
           child: BottomNavigationBar(
-            selectedItemColor: Colors.yellow,
-            unselectedItemColor: Colors.white,
-            backgroundColor: Colors.black,
+            selectedItemColor: yellow,
+            unselectedItemColor: white,
+            backgroundColor: black,
             currentIndex: controller.pageIndex,
             onTap: ((newIndex) {
               controller.onClick(newIndex);
