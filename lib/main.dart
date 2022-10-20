@@ -1,5 +1,4 @@
 import 'package:banglore_assignement/app/bottom_nav/view/bottom_nav.dart';
-import 'package:banglore_assignement/app/home_page/view/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
